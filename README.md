@@ -1,4 +1,5 @@
-# Theme Name
+# hugo-theme-lucidvoid
+A Hugo Theme for Plain Text Blogging
 
 ## Features
 
