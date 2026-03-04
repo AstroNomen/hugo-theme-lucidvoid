@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="single-layout page-layout">
+    <div class="single-content-area">
+        
+        <header class="single-header page-header">
+            <h1 class="single-title">
+                {{ if eq .Data.Singular "tag" }}# {{ end }}{{ .Title }}
+            </h1>
+        </header>
+
+        <div class="archive-content">
+            <div class="archive-posts-list">
+                
+                {{ range .Pages }}
+                <article class="archive-item">
+                    <a href="{{ .RelPermalink }}" class="archive-link">
+                        <div class="archive-meta list-meta">
+                            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                        </div>
+                        <h3 class="archive-title">{{ .Title }}</h3>
+                        
+                        {{ if .Params.tags }}
+                        <div class="archive-tags">
+                            {{ range .Params.tags }}
+                            <span class="archive-tag-item">#{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                        
+                    </a>
+                </article>
+                {{ end }}
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+{{ end }}

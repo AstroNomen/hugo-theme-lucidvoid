@@ -1,0 +1,137 @@
+<footer class="site-footer metro-dark">
+  <div class="footer-container">
+    
+    <div class="footer-main-grid">
+      
+      <div class="footer-brand-zone">
+        <h2 class="footer-site-title">{{ .Site.Title }}</h2>
+        {{ with .Site.Params.slogan }}
+          <p class="footer-slogan">{{ . }}</p>
+        {{ end }}
+        <div class="editorial-bio">{{ site.Params.footer.bio | safeHTML }}</div>
+      </div>
+
+      <div class="footer-links-zone pivot-layout">
+        
+        {{ with site.Params.footer.quicklinks }}
+        <div class="pivot-section">
+          <h3 class="pivot-header">Elsewhere</h3>
+          <ul class="metro-list">
+            {{ range . }}
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        {{ with site.Params.footer.friends }}
+        <div class="pivot-section">
+          <h3 class="pivot-header">Friends</h3>
+          <ul class="metro-list">
+            {{ range . }}
+            <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        <div class="pivot-section">
+          <h3 class="pivot-header">Connect</h3>
+          <ul class="metro-list">
+            {{ with site.Params.footer.email_protected }}
+            <li><a href="#" class="protected-email" data-contact="{{ .user }}@{{ .domain }}">Email ↗</a></li>
+            {{ end }}
+            {{ range site.Params.footer.social }}
+              {{ if ne .name "RSS" }}
+                <li>
+                  <a class="secure-social" data-sl="{{ .url | base64Encode }}" style="cursor: pointer;" title="Connect on {{ .name }}">
+                    {{ .name }} ↗
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-copyright-zone">
+      <div class="copyright-info">
+        <span>© {{ now.Year }} {{ .Site.Title }}</span>
+        <span class="meta-divider">·</span>
+        <span>All rights reserved</span>
+        <span class="meta-divider">·</span>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0</a>
+      </div>
+      
+      <div class="copyright-rss">
+        {{ range site.Params.footer.social }}
+          {{ if eq .name "RSS" }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="footer-rss-btn">{{ .name }}<svg class="rss-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const emailLinks = document.querySelectorAll('.protected-email');
+    emailLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const emailAddress = this.getAttribute('data-contact');
+        window.location.href = 'mailto:' + emailAddress; 
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const secureLinks = document.querySelectorAll('.secure-social');
+    secureLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止默认行为
+        // 获取 base64 密文并解密 (atob)
+        const encodedUrl = this.getAttribute('data-sl');
+        if (encodedUrl) {
+          const decodedUrl = atob(encodedUrl);
+          // 在新标签页安全打开
+          window.open(decodedUrl, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 找到目录和 Footer
+    const toc = document.querySelector('.single-sidebar');
+    const footer = document.querySelector('.site-footer');
+
+    // 只有在同时存在目录和 Footer 的单篇文章页面才执行
+    if(toc && footer) {
+      // 使用现代化的 IntersectionObserver 监听 Footer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // 如果 Footer 露出了 10% (threshold 决定)
+          if(entry.isIntersecting) {
+            toc.classList.add('fade-out'); // 给目录加上隐藏 Class
+          } else {
+            toc.classList.remove('fade-out'); // Footer 离开视线，目录恢复
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.1 // 0.1 表示 Footer 露出 10% 时触发，你可以改 0 体验更早触发
+      });
+
+      observer.observe(footer);
+    }
+  });
+</script>

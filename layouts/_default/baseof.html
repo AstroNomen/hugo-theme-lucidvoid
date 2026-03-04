@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+
+    <main class="site-main">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <script src="{{ "js/main.js" | relURL }}"></script>
+
+    <div class="toc-backdrop"></div>
+    <div class="metro-tools-dock">
+      
+      <button id="back-to-top" class="metro-tool-btn" title="Back to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </button>
+
+      {{ if and (eq .Type "post") (strings.Contains .TableOfContents "<li>") }}
+      <button id="mobile-toc-toggle" class="metro-tool-btn mobile-only" title="Table of Contents">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+          <line x1="9" y1="6" x2="21" y2="6"></line>
+          <line x1="9" y1="12" x2="21" y2="12"></line>
+          <line x1="9" y1="18" x2="21" y2="18"></line>
+          <rect x="3" y="5" width="2" height="2" fill="currentColor" stroke="none"></rect>
+          <rect x="3" y="11" width="2" height="2" fill="currentColor" stroke="none"></rect>
+          <rect x="3" y="17" width="2" height="2" fill="currentColor" stroke="none"></rect>
+        </svg>
+      </button>
+      {{ end }}
+      
+    </div>
+</body>
+</html>

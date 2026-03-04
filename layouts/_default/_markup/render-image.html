@@ -1,0 +1,7 @@
+<figure class="metro-figure">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" />
+  
+  {{ with .Title }}
+    <figcaption class="metro-caption">{{ . | safeHTML }}</figcaption>
+  {{ end }}
+</figure>

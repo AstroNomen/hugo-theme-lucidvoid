@@ -1,0 +1,53 @@
+{{ define "main" }}
+
+<section class="home-hero">
+    <h1 class="hero-title">{{ .Site.Title }}</h1>
+    {{ if .Site.Params.slogan }}
+    <p class="hero-slogan">{{ .Site.Params.slogan }}</p>
+    {{ end }}
+</section>
+
+<div class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "post") }}
+    <article class="post-entry">
+        <header class="entry-header">
+            <a href="{{ .RelPermalink }}" class="post-link-main">
+                <h2 class="entry-title">{{ .Title }}</h2>
+                {{ if .Params.subtitle }}
+                <h3 class="entry-subtitle">{{ .Params.subtitle }}</h3>
+                {{ end }}
+            </a>
+            <div class="entry-meta">
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    {{ .Date.Format "January 2, 2006" }}
+                </time>
+            </div>
+        </header>
+
+        {{ if .Params.description }}
+        <section class="entry-content">
+            <a href="{{ .RelPermalink }}" class="post-link-main">
+                <p class="entry-description">{{ .Params.description }}</p>
+            </a>
+        </section>
+        {{ end }}
+
+        {{ if .Params.tags }}
+        <footer class="entry-footer">
+            <div class="post-tags">
+                {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                {{ end }}
+            </div>
+        </footer>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+
+<div class="archive-action">
+  <a href="/archive/" class="btn-archive">
+    Explore Archive <span class="arrow">&rarr;</span>
+  </a>
+</div>
+{{ end }}

@@ -1,0 +1,83 @@
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    
+    <a href="/" class="site-title">{{ .Site.Title }}</a>
+
+    <nav class="nav-menu">
+      {{ $currentUrl := .RelPermalink }} 
+      {{ range site.Menus.main }}
+        {{ $isActive := eq $currentUrl .URL }}
+        <a href="{{ .URL }}" class="nav-link {{ if $isActive }}active{{ end }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </nav>
+
+    <div class="search-container" id="searchContainer">
+      <input type="text" id="searchInput" class="search-input" placeholder="SEARCH...">
+      <button class="search-toggle-btn" id="searchToggleBtn" aria-label="Toggle Search">
+        <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="search-results-panel" id="searchResults"></div>
+    </div>
+
+    <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Menu">
+      <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="icon-close-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+  </div> 
+  
+  <div class="mobile-menu-overlay" id="mobileOverlay">
+    <div class="mobile-menu-inner">
+      
+      <nav class="mobile-nav">
+        {{ $currentUrl := .RelPermalink }} 
+        {{ range site.Menus.main }}
+          {{ $isActive := eq $currentUrl .URL }}
+          <a href="{{ .URL }}" class="mobile-nav-link {{ if $isActive }}active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+
+      <div class="mobile-search-box">
+        <input type="text" id="mobileSearchInput" placeholder="SEARCH...">
+        <div class="mobile-search-results" id="mobileSearchResults"></div>
+      </div>
+
+      <div class="mobile-meta-footer">
+        <div class="copyright-info">
+          <span>© {{ now.Year }} {{ .Site.Title }}</span>
+          <span class="meta-divider">·</span>
+          <span>All rights reserved</span>
+        </div>
+
+        <a href="/index.xml" class="mobile-rss-btn" target="_blank" rel="noopener noreferrer">
+          RSS
+          <svg class="rss-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script src="/js/metro-search.js" defer></script>

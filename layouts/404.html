@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="single-layout page-layout" style="min-height: calc(100vh - 150px); display: flex; align-items: center; justify-content: center;">
+    <div class="single-content-area" style="text-align: center;">
+        
+        <h1 style="font-size: 8rem; font-weight: 800; color: var(--accent-color, #e65100); opacity: 0.15; margin: 0; line-height: 1; letter-spacing: -5px;">
+            404
+        </h1>
+        
+        <h2 style="font-size: 2rem; color: #111; margin-top: -2.5rem; position: relative; z-index: 2;">
+            Page Not Found
+        </h2>
+        
+        <p style="color: #666; font-size: 1.1rem; margin: 1.5rem 0 3rem; font-family: sans-serif;">
+            The requested state does not exist in this quantum system.<br>
+            It might have decayed, or the URL is just mistyped.
+        </p>
+
+        <a href="{{ .Site.BaseURL }}" style="display: inline-block; font-family: sans-serif; font-size: 1rem; padding: 12px 30px; background-color: #111; color: #fff; text-decoration: none; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            Return to Home
+        </a>
+
+    </div>
+</div>
+{{ end }}

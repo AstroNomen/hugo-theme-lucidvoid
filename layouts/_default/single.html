@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="single-layout">
+    
+    <article class="single-content-area">
+        <header class="single-header">
+            {{ if .Params.tags }}
+            <div class="post-tags single-tags">
+                {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            <h1 class="single-title">{{ .Title }}</h1>
+            {{ if .Params.subtitle }}
+            <h2 class="single-subtitle">{{ .Params.subtitle }}</h2>
+            {{ end }}
+
+            <div class="entry-meta single-meta">
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    {{ .Date.Format "January 2, 2006" }}
+                </time>
+                {{ if .Params.author }}
+                <span class="meta-separator">/</span>
+                <span class="author">{{ .Params.author }}</span>
+                {{ end }}
+            </div>
+        </header>
+
+        <div class="single-content">
+            {{ .Content }}
+            {{ partial "comments.html" . }}
+        </div>
+    </article>
+
+    {{ if strings.Contains .TableOfContents "<li>" }}
+      <aside class="single-sidebar">
+          <div class="toc-container">
+              <span class="toc-title">Contents</span>
+              {{ .TableOfContents }}
+          </div>
+      </aside>
+    {{ end }}
+
+</div>
+{{ end }}

@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="single-layout page-layout">
+    <div class="single-content-area">
+        
+        <header class="single-header page-header">
+            <h1 class="single-title">{{ .Title }}</h1>
+        </header>
+
+        <div class="archive-content">
+            {{ range ((where .Site.RegularPages "Section" "post").GroupByDate "2006") }}
+            <section class="archive-year-section">
+                <h2 class="archive-year">{{ .Key }}</h2>
+                
+                <div class="archive-posts-list">
+                    {{ range .Pages }}
+                    <article class="archive-item">
+                        <a href="{{ .RelPermalink }}" class="archive-link">
+                            <div class="archive-meta">
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
+                            </div>
+                            <h3 class="archive-title">{{ .Title }}</h3>
+                            {{ if .Params.tags }}
+                            <div class="archive-tags">
+                                {{ range .Params.tags }}
+                                <span class="archive-tag-item">#{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                        </a>
+                    </article>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+        </div>
+
+    </div>
+</div>
+{{ end }}
