@@ -48,7 +48,9 @@
 
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/metrotypo.css" | relURL }}">
-<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+{{ if and .IsPage (strings.Contains .Content "class=\"highlight\"") }}
+    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+{{ end }}
 {{- $customCSS := resources.Get "css/custom.css" -}}
 {{- if $customCSS -}}
     <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
