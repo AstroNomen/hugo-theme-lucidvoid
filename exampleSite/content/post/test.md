@@ -88,7 +88,7 @@ Physics research often requires structured data:
 
 If MathJax or KaTeX is enabled, these should render perfectly.
 
-Inline equation: The mass-energy equivalence is described by $E = mc^2$, where $c$ is the speed of light.
+Inline equation: The mass-energy equivalence is described by \\(E = mc^2\\), where \\(c\\) is the speed of light.
 
 Display equation (The Time-Dependent Schrödinger Equation):
 

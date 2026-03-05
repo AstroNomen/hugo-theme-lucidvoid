@@ -1,33 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Lucid Void</title>
     <link>http://localhost:1313/</link>
     <description>Recent content in Home on Lucid Void</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 21 Feb 2026 10:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typography &amp; Elements Test</title>
       <link>http://localhost:1313/post/test/</link>
       <pubDate>Sat, 21 Feb 2026 10:00:00 +0000</pubDate>
+      
       <guid>http://localhost:1313/post/test/</guid>
       <description>This is a comprehensive test page to evaluate the typography, blockquotes, code blocks, and mathematical formulas in our new Metro-Material hybrid theme.</description>
     </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Wed, 14 Dec 2022 18:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Hello there! Here is &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Zhi-Fan&lt;!-- raw HTML omitted --&gt;/ʈʂɨ fæn/&lt;!-- raw HTML omitted --&gt; (Charles)&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Dai&lt;!-- raw HTML omitted --&gt;/daɪ/&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;. For convenience, you can just call me Zhi-Fan(/ʈʂɨ˥˩ fæn˧˥/), or my western name Charles directly.&lt;/p&gt;&#xA;&lt;p&gt;Now I am a PhD researcher in the sNOm Laboratory, Politecnico di Milano, Italy. I mainly focused on the nonlinear optics.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Archive</title>
-      <link>http://localhost:1313/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/archive/</guid>
-      <description></description>
-    </item>
+    
   </channel>
 </rss>

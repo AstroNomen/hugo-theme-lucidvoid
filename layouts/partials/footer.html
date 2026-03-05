@@ -59,10 +59,11 @@
     <div class="footer-copyright-zone">
       <div class="copyright-info">
         <span>© {{ now.Year }} {{ .Site.Title }}</span>
+        <span>{{ .Site.Params.footer.copyright | default "All rights reserved" }}</span>
+        {{ with .Site.Params.footer.license }}
         <span class="meta-divider">·</span>
-        <span>All rights reserved</span>
-        <span class="meta-divider">·</span>
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0</a>
+        <a href="{{ $.Site.Params.footer.licenseLink }}" target="_blank" rel="license noopener noreferrer">{{ . }}</a>
+        {{ end }}
       </div>
       
       <div class="copyright-rss">

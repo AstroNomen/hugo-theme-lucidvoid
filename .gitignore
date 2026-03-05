@@ -1,0 +1,7 @@
+# exampleSite 里生成的垃圾
+exampleSite/public/
+exampleSite/resources/
+exampleSite/.hugo_build.lock
+
+# Mac 系统玄学文件
+.DS_Store

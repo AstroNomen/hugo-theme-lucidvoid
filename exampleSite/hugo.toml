@@ -12,6 +12,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
 [outputs]
   home = ["HTML", "RSS", "JSON"] # 确保输出了 JSON
 
+[taxonomies]
+  tag = "tags"
+
 [params]
   slogan = "A Hugo Theme for Plain Text Blogging"
   description = "Research archive, academic notes, and reflections on Photonics and Physics by a PhD researcher at Politecnico di Milano."
@@ -24,6 +27,10 @@ ignoreLogs = ['warning-goldmark-raw-html']
   themeColor = "#26a69a"  # 你的主色调 (水鸭绿)
   accentColor = "#e65100" # 你的辅助色 (深秋橘)
   accentLightColor = "#fff3e0" # 你的浅辅助色 (极淡橘, 作为深秋橘的极淡背景色)
+
+  homePostCount = 5 # 默认显示 5 篇
+
+  author = "Charles"
 
 # ==========================================
 # 顶部主菜单配置 (Main Menu)
@@ -53,13 +60,23 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # 文章自定义配置
 # ==========================================
 
-# 数学公式支持
-[params.katex]
-  enableKaTeX = true
+  # 数学公式支持
+  [params.katex]
+    enableKaTeX = true
 
-# Giscus 评论支持
-[params.giscus]
-  enableGiscus = true
+  # Giscus 评论支持
+  [params.giscus]
+    enableGiscus = true
+
+# ==========================================
+# 代码块配置
+# ==========================================
+
+  [markup]
+  [markup.highlight]
+    noClasses = false 
+    lineNos = true     # 是否显示行号
+    tabWidth = 4
 
 # ==========================================
 # Footer 自定义配置
@@ -67,6 +84,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
   [params.footer]
   # 个人简介（支持传入 HTML 标签，如 <br>）
   bio = "PhD Researcher of Physics<br>sNOm Laboratory<br>@Politecnico di Milano"
+  copyright = "All rights reserved" # 或者是 "Some rights reserved"
+  license = "CC BY-NC-SA 4.0"
+  licenseLink = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   
   # 固定邮箱地址
   [params.footer.email_protected]
@@ -97,10 +117,4 @@ ignoreLogs = ['warning-goldmark-raw-html']
     name = "RSS"
     url = "/index.xml"
 
-[markup]
-[markup.highlight]
-  # 🎯 极其关键：关闭内联样式，允许我们自己的 CSS 接管代码块高亮！
-  noClasses = false 
-  # 下面这两个是可选的增强体验
-  lineNos = false     # 是否显示行号 (极简风建议关掉)
-  tabWidth = 4        # Tab 键的宽度
+  

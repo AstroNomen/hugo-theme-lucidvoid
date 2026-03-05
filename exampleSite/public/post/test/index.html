@@ -8,7 +8,7 @@
 
 <meta name="description" content="This is a comprehensive test page to evaluate the typography, blockquotes, code blocks, and mathematical formulas in our new Metro-Material hybrid …">
 <meta name="keywords" content="Test, Physics, Design">
-<meta name="author" content="Charles Dai">
+<meta name="author" content="Charles">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"> 
@@ -43,7 +43,9 @@
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/metrotypo.css">
-<link rel="stylesheet" href="/css/syntax.css">
+
+    <link rel="stylesheet" href="/css/syntax.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
@@ -195,6 +197,10 @@
                     February 21, 2026
                 </time>
                 
+                
+                <span class="meta-separator">/</span>
+                <span class="author">Charles</span>
+                
             </div>
         </header>
 
@@ -214,7 +220,25 @@
 <hr>
 <h2 id="2-code-blocks-计算物理刚需">2. Code Blocks (计算物理刚需)</h2>
 <p>Here is a typical Python script used for plotting a wave function in 1D infinite potential well:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">wave_function</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
@@ -228,11 +252,21 @@
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">wave_function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&#34;n=1&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Quantum Well Ground State&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><p>And a simple shell command for compiling a C++ simulation:</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And a simple shell command for compiling a C++ simulation:</p>
 <p>Bash</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">g++ -O3 -fopenmp monte_carlo.cpp -o mc_sim
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">g++ -O3 -fopenmp monte_carlo.cpp -o mc_sim
 </span></span><span class="line"><span class="cl">./mc_sim --particles <span class="m">100000</span>
-</span></span></code></pre></div><h2 id="3-lists-and-data-列表与表格">3. Lists and Data (列表与表格)</h2>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-lists-and-data-列表与表格">3. Lists and Data (列表与表格)</h2>
 <p>Physics research often requires structured data:</p>
 <h3 id="standard-model-fermions-unordered-list">Standard Model Fermions (Unordered List)</h3>
 <ul>
@@ -290,7 +324,7 @@
 <hr>
 <h2 id="4-mathematical-formulas-公式测试">4. Mathematical Formulas (公式测试)</h2>
 <p>If MathJax or KaTeX is enabled, these should render perfectly.</p>
-<p>Inline equation: The mass-energy equivalence is described by $E = mc^2$, where $c$ is the speed of light.</p>
+<p>Inline equation: The mass-energy equivalence is described by \(E = mc^2\), where \(c\) is the speed of light.</p>
 <p>Display equation (The Time-Dependent Schrödinger Equation):</p>
 <p>$$ i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2m}\nabla^2 + V(\mathbf{r},t) \right ] \Psi(\mathbf{r},t) $$</p>
 <p>End of test page.</p>
@@ -398,10 +432,11 @@
     <div class="footer-copyright-zone">
       <div class="copyright-info">
         <span>© 2026 Lucid Void</span>
-        <span class="meta-divider">·</span>
         <span>All rights reserved</span>
+        
         <span class="meta-divider">·</span>
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-NC-SA 4.0</a>
+        
       </div>
       
       <div class="copyright-rss">
