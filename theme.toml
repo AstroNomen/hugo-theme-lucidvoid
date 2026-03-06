@@ -1,55 +1,18 @@
-name = 'Theme name'
-license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
-
-# The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
-
-# If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
-
-# Taxonomy terms
-tags = ['blog', 'company']
-features = ['some', 'awesome', 'features']
-
-# If the theme has multiple authors
-authors = [
-  {name = 'Name of author', homepage = 'Website of author'},
-  {name = 'Name of author', homepage = 'Website of author'}
-]
-
-# If the theme has a single author
-[author]
-  name = 'Your name'
-  homepage = 'Your website'
-
-# If porting an existing theme
-[original]
-  author = 'Name of original author'
-  homepage = 'Website of original author'
-  repo = 'https://github.com/owner/repo'
-
 # ==========================================
 # 🌌 Lucid Void - Theme Configuration
 # ==========================================
 
 name = "Lucid Void"
-license = "MIT"
-licenselink = "https://github.com/你的GitHub名/hugo-theme-lucidvoid/blob/main/LICENSE"
-description = "A minimalist, academic-focused Hugo theme with a monochromatic spatial aesthetic."
+license = "GPL-3.0-or-later"
+licenselink = "https://github.com/AstroNomen/hugo-theme-lucidvoid/blob/main/LICENSE"
+description = "A Hugo theme designed exclusively for plain text blogging. It returns the digital reading experience to its purest form by stripping away redundant visual noise."
 
-# 未来开源后的 GitHub 仓库地址
-homepage = "https://github.com/你的GitHub名/hugo-theme-lucidvoid"
-
-# 你可以用你的个人站作为官方 Demo
+homepage = "https://github.com/AstroNomen/hugo-theme-lucidvoid"
 demosite = "https://sss.akiday.com"
 
-# 标签，方便未来在 Hugo 官方主题商店被检索
-tags = ["minimalist", "academic", "blog", "portfolio", "dark-mode-ready"]
-features = ["math-typesetting", "zero-js-highlight", "responsive", "accessibility"]
+tags = ["blog", "minimalist", "plain-text", "typography", "clean"]
+features = ["math-typesetting", "responsive", "zero-dependency", "auto-dark-mode"]
 
-# 你的专属署名
 [author]
-  name = "Charles Dai (AkiDAY)"
-  homepage = "https://akiday.com"
+  name = "Aki (AkiDAY.)"
+  homepage = "https://akiday.com/en"
