@@ -58,7 +58,7 @@
 
     <div class="footer-copyright-zone">
       <div class="copyright-info">
-        <span>© {{ now.Year }} {{ .Site.Title }}</span>
+        <span>© {{ now.Year }} {{ .Site.Title }}</span><span class="meta-divider">·</span>
         <span>{{ .Site.Params.footer.copyright | default "All rights reserved" }}</span>
         {{ with .Site.Params.footer.license }}
         <span class="meta-divider">·</span>
