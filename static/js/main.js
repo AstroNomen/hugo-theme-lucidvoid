@@ -151,6 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.documentElement.style.overflow = '';
     });
 
+    // 🎯 新增：点击正文（或屏幕其他非目录区域），直接退出目录
+    document.addEventListener('click', (e) => {
+      if (
+        tocSidebar.classList.contains('sheet-open') &&
+        !tocSidebar.contains(e.target) &&
+        !tocToggleBtn.contains(e.target)
+      ) {
+        tocSidebar.classList.remove('sheet-open');
+        tocBackdrop.classList.remove('show');
+        document.documentElement.style.overflow = '';
+      }
+    });
+
     // 🎯 点击目录里的任何一个链接跳转后，自动关闭抽屉！
     allTocLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -160,6 +173,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
 
 });
