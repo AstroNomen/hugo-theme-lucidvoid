@@ -1,26 +1,23 @@
 ---
+title: "About Lucid Void"
+date: 2026-03-06T18:50:00+01:00
 type: "page"
-title: "About"
-author: "Charles"
-date: 2022-12-14T18:00:00+01:00
+description: "The design philosophy and architecture behind the Lucid Void theme."
+math: false
 ---
 
-Hello there! Here is **<ruby>Zhi-Fan<rt>/ʈʂɨ fæn/</rt> (Charles)<rt></rt> Dai<rt>/daɪ/</ruby>**. For convenience, you can just call me Zhi-Fan(/ʈʂɨ˥˩ fæn˧˥/), or my western name Charles directly. 
+Welcome to the demonstration site of **Lucid Void**, a custom Hugo theme crafted exclusively for plain text blogging.
 
-Now I am a PhD researcher in the sNOm Laboratory, Politecnico di Milano, Italy. I mainly focused on the nonlinear optics. 
+Proudly powered by [Hugo](https://gohugo.io) and available open-source on [GitHub](https://github.com/yourusername/hugo-theme-lucidvoid).
 
-I completed my Master degree in Photonics Engineering at Ghent University - IMEC, Belgium.
+The project was initiated in early 2026, driven by a desire to create a tailored aesthetic language for digital reading. In an era of infinite scroll and visual noise, Lucid Void is built on the premise that content should always remain the absolute focus.
 
-Welcome to my research blog, where I archive my personal academic research collections and works. The title of this site, ***"SSS"***, stands for ***"Studying Something Shining"***, referring to the field of photonics that I am dedicating. I love this shiny science.
+### The Design Philosophy
 
+Lucid Void synthesizes two distinct design languages: the expansive, spatial navigation paradigms of the classic **Metro UI**, and the tactile depth and realistic shadows of **Material Design**. 
 
+The foundation of this theme is intentionally restrained. It relies on a strictly monochromatic "void" composed of black, white, and gray. This absolute quietness serves a specific purpose: it allows the customizable accent colors—like the default lucid Teal and Autumn Orange—to leap out, injecting life and a sense of personal identity into the site.
 
----
+By stripping away redundant widgets, complex category trees, and over-engineered layouts, this architecture returns the reading experience to its purest form. It is an ideal digital repository for researchers, writers, and creators who value clarity and structure above all else.
 
-
-
-<span style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;"><font size=2 color=#666666>Proudly Powered by [Hugo](https://gohugo.io/) and Hosted on [Github Pages](https://pages.github.com/). </font></span>
-
-<font size=2 color=#666666><span style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;">The [head figure](https://hubblesite.org/contents/media/images/2015/01/3471-Image.html) of this website is the famous Pillars of Creation Messier 16 Eagle Nebula taken by NASA Hubble Space Telescope. The pillars are part of a small region of the Eagle Nebula, a vast star-forming region 6,500 light-years from Earth. The colors in the image highlight emission from several chemical elements. Oxygen emission is blue, sulfur is orange, and hydrogen and nitrogen are green.</font></span>
-
-<span style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;"><font size=2 color=#666666>The [404 page background figure](https://images.nasa.gov/details-carina_nebula) of this website is taken by the Near-Infrared Camera (NIRCam) on [NASA](https://images.nasa.gov) James Webb Space Telescope, it is the star-forming region NGC 3324 in the Carina Nebula.</font></span>
+Write something shining.

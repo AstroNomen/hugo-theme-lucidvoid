@@ -6,41 +6,40 @@ languageCode = "en-gb"
 hasCJKLanguage = true
 buildFuture = true
 
-# 忽略 Markdown 直接写 HTML 标签时的烦人警告
-ignoreLogs = ['warning-goldmark-raw-html']
-
 [outputs]
-  home = ["HTML", "RSS", "JSON"] # 确保输出了 JSON
+  # [EN] Ensure JSON is generated for local search / [ZH] 确保输出 JSON 以支持本地搜索
+  home = ["HTML", "RSS", "JSON"] 
 
 [taxonomies]
+  # [EN] We embrace a flat taxonomy system using only Tags / [ZH] 极简主义：仅启用标签，禁用分类
   tag = "tags"
 
 [params]
   slogan = "A Hugo Theme for Plain Text Blogging"
-  description = "Research archive, academic notes, and reflections on Photonics and Physics by a PhD researcher at Politecnico di Milano."
-  keywords = "Photonics, Physics, Optics, Academic Blog, PhD Research, Politecnico di Milano"
-  SEOTitle = "A Hugo Theme for Plain Text Blogging"
+  description = "A minimalist Hugo theme synthesizing Metro UI paradigms with plain text focus."
+  keywords = "Hugo Theme, Plain Text, Minimalist, Metro UI, Blog"
+  SEOTitle = "Lucid Void - Plain Text Hugo Theme"
 
-  googleSearchConsole = "这里填入Google Search Console提供的 HTML Tag 验证码"
-  googleAnalyticsID = "G-XXXXXXXXXX" # 这里填入你最新的 GA4 测量 ID
+  # [EN] Webmaster verifications / [ZH] 站长验证与统计
+  googleSearchConsole = "Your_HTML_Tag_Here"
+  googleAnalyticsID = "G-XXXXXXXXXX" 
 
-  themeColor = "#26a69a"  # 你的主色调 (水鸭绿)
-  accentColor = "#e65100" # 你的辅助色 (深秋橘)
-  accentLightColor = "#fff3e0" # 你的浅辅助色 (极淡橘, 作为深秋橘的极淡背景色)
+  # [EN] Theme Palette / [ZH] 主题色彩引擎
+  themeColor = "#26a69a"       # [EN] Main brand color (Teal) / [ZH] 主题色 (水鸭绿)
+  accentColor = "#e65100"      # [EN] Highlight accent color (Orange) / [ZH] 高亮辅助色 (深秋橘)
+  accentLightColor = "#fff3e0" # [EN] Light background for accent / [ZH] 辅助色的浅背景底色
 
-  homePostCount = 5 # 默认显示 5 篇
-
-  author = "Charles"
+  homePostCount = 5 # [EN] Number of posts on homepage / [ZH] 首页显示文章数量
+  author = "Your Name"
 
 # ==========================================
-# 顶部主菜单配置 (Main Menu)
+# [EN] Main Menu / [ZH] 顶部主菜单配置
 # ==========================================
 [[menu.main]]
   name = "Home"
   url = "/"
   weight = 1
 
-# 如果你想链向某个分类，直接把 URL 指过去即可
 [[menu.main]]
   name = "Tags"
   url = "/tags/"
@@ -57,64 +56,62 @@ ignoreLogs = ['warning-goldmark-raw-html']
   weight = 4
 
 # ==========================================
-# 文章自定义配置
+# [EN] Feature Toggles / [ZH] 功能开关
 # ==========================================
 
-  # 数学公式支持
   [params.katex]
-    enableKaTeX = true
+    enableKaTeX = true  # [EN] Enable Math typesetting / [ZH] 开启数学公式支持
 
-  # Giscus 评论支持
   [params.giscus]
-    enableGiscus = true
+    enableGiscus = true # [EN] Enable Giscus comments / [ZH] 开启 Giscus 评论
 
 # ==========================================
-# 代码块配置
+# [EN] Code Blocks / [ZH] 代码块配置
 # ==========================================
 
   [markup]
   [markup.highlight]
     noClasses = false 
-    lineNos = true     # 是否显示行号
+    lineNos = true      # [EN] Show line numbers / [ZH] 是否显示行号
     tabWidth = 4
 
 # ==========================================
-# Footer 自定义配置
+# [EN] Footer Configuration / [ZH] 页脚区域配置
 # ==========================================
   [params.footer]
-  # 个人简介（支持传入 HTML 标签，如 <br>）
-  bio = "PhD Researcher of Physics<br>sNOm Laboratory<br>@Politecnico di Milano"
-  copyright = "All rights reserved" # 或者是 "Some rights reserved"
+  # [EN] Short bio (Supports HTML) / [ZH] 个人简介（支持 HTML 标签换行）
+  bio = "A writer, thinker, <br>and explorer of the lucid void.<br>@Planet Earth"
+  # [EN] Copyright information / [ZH] 版权信息
+  copyright = "All rights reserved" 
   license = "CC BY-NC-SA 4.0"
   licenseLink = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   
-  # 固定邮箱地址
+  # [EN] Protected Email / [ZH] 防爬虫邮箱保护
   [params.footer.email_protected]
-    user = "Zhifan.Dai"
-    domain = "outlook.com"
+    user = "hello"
+    domain = "example.com"
 
-  # Quick Links 列表
+  # [EN] Quick Links / [ZH] 快速链接列表
   [[params.footer.quicklinks]]
     name = "Bio"
-    url = "/bio"
+    url = "https://your-bio.com"
   [[params.footer.quicklinks]]
-    name = "Blog in Chinese"
-    url = "https://your-chinese-blog.com"
+    name = "Projects"
+    url = "https://your-projects.com"
 
-  # Friends 列表
+  # [EN] Friends or Blogroll / [ZH] 友链列表
   [[params.footer.friends]]
-    name = "Chengyu Fu"
-    url = "https://storm-lifter-278.notion.site/20fd9d7d2ac78016877af1808ecdaaf4?v=20fd9d7d2ac781e69c79000c5eac71bb"
+    name = "Friend's Blog"
+    url = "https://example.com"
 
-  # 其他社交媒体列表 (Connect)
+  # [EN] Social Connect / [ZH] 社交媒体列表
   [[params.footer.social]]
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/zhi-fan-dai-958624248/"
+    name = "X / Twitter"
+    url = "https://twitter.com/yourhandle"
   [[params.footer.social]]
     name = "GitHub"
-    url = "https://github.com/AstroNomen"
+    url = "https://github.com/yourusername"
+
   [[params.footer.social]]
     name = "RSS"
     url = "/index.xml"
-
-  
