@@ -1,6 +1,6 @@
 baseURL = "https://your-custom-domain.com/"
 title = "Lucid Void"
-theme = "lucidvoid"
+theme = "hugo-theme-lucidvoid"
 themesDir = "../.."
 languageCode = "en-gb" 
 hasCJKLanguage = true
