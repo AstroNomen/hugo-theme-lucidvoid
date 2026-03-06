@@ -174,4 +174,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // 6. 接近 Footer 时自动隐藏目录
+  // ==========================================
+  if (tocSidebar && footer) {
+    // 使用现代化的 IntersectionObserver 监听 Footer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // 如果 Footer 露出了 10% (threshold 决定)
+        if (entry.isIntersecting) {
+          tocSidebar.classList.add('fade-out'); // 给目录加上隐藏 Class
+        } else {
+          tocSidebar.classList.remove('fade-out'); // Footer 离开视线，目录恢复
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1 // 0.1 表示 Footer 露出 10% 时触发，你可以改 0 体验更早触发
+    });
+
+    observer.observe(footer);
+  }
+
+  /* =========================================
+   S.S.S. 核心交互脚本 (Core Interactions)
+   ========================================= */
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 1. 邮箱防爬虫保护
+  const emailLinks = document.querySelectorAll('.protected-email');
+  emailLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      window.location.href = 'mailto:' + this.getAttribute('data-contact'); 
+    });
+  });
+
+  // 2. Base64 安全社交链接解密
+  const secureLinks = document.querySelectorAll('.secure-social');
+  secureLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const encodedUrl = this.getAttribute('data-sl');
+      if (encodedUrl) window.open(atob(encodedUrl), '_blank', 'noopener,noreferrer');
+    });
+  });
+});
+
 });
