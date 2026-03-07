@@ -1,8 +1,15 @@
 baseURL = "https://your-custom-domain.com/"
 title = "Lucid Void"
 theme = "hugo-theme-lucidvoid"
+
+# ==========================================
+# ⚠️ ATTENTION / 注意
+# [EN] Please DELETE the `themesDir` line below when you copy this config to your own site. It is only used for this exampleSite.
+# [ZH] 当您将此配置复制到自己的站点时，请务必删除下方的 `themesDir` 这行代码。它仅用于演示站点。
+# ==========================================
 themesDir = "../.."
-languageCode = "en-gb" 
+
+languageCode = "en-gb"  # Change to your preferred language / [ZH] 更改为您偏好的语言
 hasCJKLanguage = true
 buildFuture = true
 
