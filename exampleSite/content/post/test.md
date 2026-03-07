@@ -9,7 +9,7 @@ summary: "This is a comprehensive test page to evaluate the typography, blockquo
 
 Welcome to the typography test page. This paragraph tests the standard body text. In physics, we often deal with concepts like **Quantum Entanglement** (bold text) and *Spontaneous Symmetry Breaking* (italic text). Sometimes we refer to a specific variable like `var_energy` (inline code).
 
-## 1. Blockquotes (学术引用)
+## 1. Blockquotes
 
 In academic writing, we often cite literature or emphasize core principles:
 
@@ -24,7 +24,7 @@ And sometimes we have nested or longer explanations:
 
 ---
 
-## 2. Code Blocks (计算物理刚需)
+## 2. Code Blocks
 
 Here is a typical Python script used for plotting a wave function in 1D infinite potential well:
 
@@ -54,7 +54,7 @@ g++ -O3 -fopenmp monte_carlo.cpp -o mc_sim
 ./mc_sim --particles 100000
 ```
 
-## 3. Lists and Data (列表与表格)
+## 3. Lists and Data
 
 Physics research often requires structured data:
 
@@ -93,5 +93,9 @@ Inline equation: The mass-energy equivalence is described by \\(E = mc^2\\), whe
 Display equation (The Time-Dependent Schrödinger Equation):
 
 $$ i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2m}\nabla^2 + V(\mathbf{r},t) \right ] \Psi(\mathbf{r},t) $$
+
+## 5. Figure
+
+![Lucid Void Showcase](../../../images/cover.png "Showcase of Lucid Void") 
 
 End of test page.
