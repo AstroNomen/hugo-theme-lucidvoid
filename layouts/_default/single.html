@@ -46,7 +46,7 @@
     {{ end }}
 
     {{ if and (eq .Type "post") (ne .Params.comments false) }}
-    {{ if .Site.Params.enableGiscus }}
+    {{ if .Site.Params.giscus.enableGiscus }}
         {{ partial "comments.html" . }}
     {{ end }}
     {{ end }}

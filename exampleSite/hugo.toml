@@ -18,7 +18,7 @@ buildFuture = true
   slogan = "A Hugo Theme for Plain Text Blogging"
   description = "A minimalist Hugo theme synthesizing Metro UI paradigms with plain text focus."
   keywords = "Hugo Theme, Plain Text, Minimalist, Metro UI, Blog"
-  SEOTitle = "Lucid Void - Plain Text Hugo Theme"
+  SEOTitle = "Plain Text Hugo Theme"
 
   # [EN] Webmaster verifications / [ZH] 站长验证与统计
   googleSearchConsole = "Your_HTML_Tag_Here"
@@ -93,6 +93,9 @@ buildFuture = true
 
   # [EN] Quick Links / [ZH] 快速链接列表
   [[params.footer.quicklinks]]
+    name = "AkiDAY. (Designer)"
+    url = "https://AkiDAY.com/en"
+  [[params.footer.quicklinks]]
     name = "Bio"
     url = "https://your-bio.com"
   [[params.footer.quicklinks]]
@@ -101,8 +104,8 @@ buildFuture = true
 
   # [EN] Friends or Blogroll / [ZH] 友链列表
   [[params.footer.friends]]
-    name = "Friend's Blog"
-    url = "https://example.com"
+    name = "S.S.S. (Live Showcase)"
+    url = "https://sss.akiday.com"
 
   # [EN] Social Connect / [ZH] 社交媒体列表
   [[params.footer.social]]

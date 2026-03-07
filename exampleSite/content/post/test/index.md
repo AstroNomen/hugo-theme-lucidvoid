@@ -74,7 +74,7 @@ Physics research often requires structured data:
 2. Isolate the optical table from vibrations.
 3. Record the interference fringes.
 
-### Data Table (表格)
+### Data Table
 
 | **Particle** | **Symbol** | **Mass (MeV/c²)** | **Charge (e)** |
 | ------------ | ---------- | ----------------- | -------------- |
@@ -84,7 +84,7 @@ Physics research often requires structured data:
 
 ------
 
-## 4. Mathematical Formulas (公式测试)
+## 4. Mathematical Formulas
 
 If MathJax or KaTeX is enabled, these should render perfectly.
 

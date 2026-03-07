@@ -27,10 +27,14 @@ It is primarily inspired by the expansive, spatial navigation paradigms of the c
 - **Blazing Fast Search**: Lightweight, client-side local search powered entirely by native JS.
 
 ### ⚙️ Installation & Usage
+
 Inside the root folder of your Hugo site, run:
 ```bash
 git submodule add [https://github.com/AstroNomen/hugo-theme-lucidvoid.git](https://github.com/AstroNomen/hugo-theme-lucidvoid.git) themes/lucidvoid
 ```
+### 🙏 Attribution & Support
+
+Lucid Void is a labor of love, provided freely and open-source. While you are free to modify the theme to suit your needs, I kindly request that you **keep the footer attribution link** (`Theme Lucid Void designed by AkiDAY.`) intact. It is the greatest support for my work and helps more people discover this hugo theme.
 
 ---
 
@@ -58,3 +62,7 @@ git submodule add [https://github.com/AstroNomen/hugo-theme-lucidvoid.git](https
 ```
 
 详细配置请参考本仓库 `exampleSite` 文件夹下的 `hugo.toml` 模板。
+
+### 🙏 署名与支持
+
+Lucid Void 是利用业余时间精心打磨的开源作品。虽然您可以自由地修改主题以满足个人需求，但恳请您**保留页脚的主题署名链接**（`Theme Lucid Void designed by AkiDAY.`）。您的保留是对创作者心血最大的尊重与支持，也能帮助更多人发现这套主题，不胜感激。
