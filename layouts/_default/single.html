@@ -30,7 +30,6 @@
 
         <div class="single-content">
             {{ .Content }}
-            {{ partial "comments.html" . }}
         </div>
     </article>
 
@@ -46,5 +45,10 @@
       </aside>
     {{ end }}
 
+    {{ if and (eq .Type "post") (ne .Params.comments false) }}
+    {{ if .Site.Params.enableGiscus }}
+        {{ partial "comments.html" . }}
+    {{ end }}
+    {{ end }}
 </div>
 {{ end }}

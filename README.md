@@ -2,7 +2,7 @@
 
 # Lucid Void for Hugo
 
-<img align="right" src="images/logo.png" alt="Lucid Void Logo" width="220">
+<img align="right" src="images/logo.png" alt="Lucid Void Logo" width="160">
 
 A Hugo theme crafted for plain text blogging. It returns the digital reading experience to its purest essence.
 
