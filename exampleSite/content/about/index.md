@@ -10,7 +10,7 @@ math: false
 
 ---
 
-<h2 id="english" class="sr-only">English</h2>
+## English {#english}
 
 Welcome to the demonstration site of **Lucid Void**, a custom Hugo theme crafted exclusively for plain text blogging.
 
@@ -30,7 +30,7 @@ By stripping away redundant widgets, complex category trees, and over-engineered
 
 ---
 
-<h2 id="中文" class="sr-only">中文</h2>
+## 中文 {#中文}
 
 欢迎来到 **Lucid Void** 的演示站点，这是一个专为纯文本博客打造的定制化 Hugo 主题。
 

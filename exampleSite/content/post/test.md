@@ -96,6 +96,6 @@ $$ i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^
 
 ## 5. Figure
 
-![Lucid Void Showcase](../../../images/cover.png "Showcase of Lucid Void") 
+![Lucid Void Showcase](/images/cover.png "Showcase of Lucid Void") 
 
 End of test page.
